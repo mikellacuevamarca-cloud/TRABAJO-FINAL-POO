@@ -2,7 +2,7 @@
 package modelo;
 
 public class MesaElectoral {
-    //ATRIBUTOS
+    //ATRIBUTOS de clase
     private int idMesa;
     private MiembroDeMesa miembroMesa;
     private int nroTotalVotantesRegistrados;
