@@ -9,5 +9,5 @@ package modelo;
  * @author Mikella
  */
 public class PartidoPolitico {
-    
+    //..
 }
