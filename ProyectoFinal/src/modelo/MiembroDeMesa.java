@@ -1,13 +1,6 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
+
 package modelo;
 
-/**
- *
- * @author Mikella
- */
 public class MiembroDeMesa extends Persona{
     //ATRIBUTOS
     public String tipoDeMiembro;
@@ -20,8 +13,8 @@ public class MiembroDeMesa extends Persona{
     }
     
     //Constructor con p
-    public MiembroDeMesa(String nombres, String apellidos, String tipoDeMiembro){
-        super(nombres, apellidos);
+    public MiembroDeMesa(String nombres, String apellidos, int nrodni, String tipoDeMiembro){
+        super(nombres, apellidos, nrodni);
         this.tipoDeMiembro = tipoDeMiembro;
     }
     
@@ -36,7 +29,10 @@ public class MiembroDeMesa extends Persona{
     }
     
     //redefinir verInfo()
+    @Override
     public void verInfo(){
+        System.out.println("Información del miembro de mesa: ");
+        super.verInfo();
         System.out.println("Tipo de miembro(presidente, secretarion o vocal): " + tipoDeMiembro);
     }
     

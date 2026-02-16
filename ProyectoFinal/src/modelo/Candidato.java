@@ -1,55 +1,38 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
+
 package modelo;
 
-/**
- *
- * @author Mikella
- */
-    
 public class Candidato extends Persona {
     //ATRIBUTOS
-    private int nrodni;
-    private String partidoPolitico;
+    private PartidoPolitico partidoPolitico;
     
     //METODOS
     //CONSTRUCTOR sin p
     public Candidato() {
         super();
-        nrodni = 0;
-        partidoPolitico = "";
+        partidoPolitico = null;
     }
 
     //constructor con p
-    public Candidato(String nombres, String apellidos, int nrodni, String partidoPolitico){
-        super(nombres, apellidos);
-        this.nrodni = nrodni;
+    public Candidato(String nombres, String apellidos, int nrodni, PartidoPolitico partidoPolitico){
+        super(nombres, apellidos, nrodni);
         this.partidoPolitico = partidoPolitico;
     }
     
     //GET AND SETTER
 
-    public int getNrodni() {
-        return nrodni;
-    }
-
-    public void setNrodni(int nrodni) {
-        this.nrodni = nrodni;
-    }
-
-    public String getPartidoPolitico() {
+    public PartidoPolitico getPartidoPolitico() {
         return partidoPolitico;
     }
 
-    public void setPartidoPolitico(String partidoPolitico) {
+    public void setPartidoPolitico(PartidoPolitico partidoPolitico) {
         this.partidoPolitico = partidoPolitico;
     }
     
     //REDEFINIR METODO verInfo
+    @Override
     public void verInfo(){
-        System.out.println("DNI: " + nrodni);
+        System.out.println("Información del candidato: ");
+        super.verInfo();
         System.out.println("Partido politico: " + partidoPolitico);
     }
 
