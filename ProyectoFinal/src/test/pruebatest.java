@@ -4,10 +4,8 @@
  */
 package test;
 
-/**
- *
- * @author Mikella
- */
 public class pruebatest {
-    
+    public static void main(String[] args){
+        
+    }
 }

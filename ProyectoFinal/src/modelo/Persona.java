@@ -3,9 +3,9 @@ package modelo;
 
 public class Persona {
     //ATRIBUTOS
-    private String nombres;
-    private String apellidos;
-    private int nrodni; 
+    protected String nombres;
+    protected String apellidos;
+    protected int nrodni; 
     
     //metodo
     //CONSTRUCTOR sin p

@@ -1,5 +1,5 @@
 package modelo;
-
+import java.util.Scanner;
 public class Candidato extends Persona {
     //ATRIBUTOS
     private PartidoPolitico partidoPolitico;
@@ -33,6 +33,10 @@ public class Candidato extends Persona {
         System.out.println("Información del candidato: ");
         super.verInfo();
         System.out.println("Partido politico: " + partidoPolitico);
+    }
+    public void registroCandidato(){
+        Scanner sc = new Scanner(System.in);
+        System.out.println("");
     }
 
 }
