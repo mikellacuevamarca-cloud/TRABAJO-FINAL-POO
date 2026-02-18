@@ -8,7 +8,6 @@ public class Candidato extends Persona {
     //CONSTRUCTOR sin p
     public Candidato() {
         super();
-        partidoPolitico = null;
     }
 
     //constructor con p
@@ -28,15 +27,38 @@ public class Candidato extends Persona {
     }
     
     //REDEFINIR METODO verInfo
+    
     @Override
-    public void verInfo(){
-        System.out.println("Información del candidato: ");
-        super.verInfo();
-        System.out.println("Partido politico: " + partidoPolitico);
+    public String toString(){
+        return "Candidato:"+nombres +"\n"+"Partido Politico:" + partidoPolitico;
     }
     public void registroCandidato(){
         Scanner sc = new Scanner(System.in);
-        System.out.println("");
+        System.out.print("Ingrese el nombre del candidato:");
+        nombres=sc.nextLine();
+        System.out.print("Ingrese el apellido del candidato:");
+        apellidos=sc.nextLine();
+        System.out.print("Ingrese el numero de dni del candidato");
+        nrodni=sc.nextInt();
+        sc.nextLine();
+    }
+    public void modificarCandidato(){
+        char opcion;
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Modifique el nombre del candidato:");
+        nombres=sc.nextLine();
+        System.out.print("Modifique el apellido del candidato:");
+        apellidos=sc.nextLine();
+        System.out.println("Modifique el dni del candidato:");
+        nrodni=sc.nextInt();
+        System.out.print("Desea modificar los datos del partido actual:");
+        opcion = sc.next().charAt(0);
+    }
+    @Override
+    public void verInfo() {
+        System.out.println("Información del candidato: ");
+        super.verInfo();
+        System.out.println(partidoPolitico);
     }
 
 }
