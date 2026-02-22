@@ -21,7 +21,7 @@ public class HMiembroDeMesa extends HPersona{
         this.tipoDeMiembro = tipoDeMiembro;
     }
     
-    //redefinir verInfo()
+    //redefinir verInfo() verificar
     @Override
     public String verInfo(){
         return "MiembroDeMesa {" + super.verInfo() + "Tipo De Miembro: " +

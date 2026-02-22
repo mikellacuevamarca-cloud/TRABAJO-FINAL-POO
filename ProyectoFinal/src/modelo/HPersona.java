@@ -47,7 +47,7 @@ public class HPersona {
         this.nrodni = nrodni;
     }
     
-    //OTROS METODOS
+    //OTROS METODOS veriinfo
     public String verInfo(){
         return "Nombres: "+ nombres+
                 "\nApellidos: "+ apellidos+

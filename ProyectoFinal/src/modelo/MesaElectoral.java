@@ -42,7 +42,7 @@ public class MesaElectoral {
     }
    
     
-   
+   //falta
     public void modificarMesaElectoral(){
         Scanner sc = new Scanner(System.in);
         System.out.print("Ingrese el id de la mesa Electoral: ");
