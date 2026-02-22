@@ -35,10 +35,13 @@ public class MesaElectoral {
     public String verInfo() {
         String comentario = "";
         for (int i = 0; i < miembroMesa.length; i++) {
-            comentario = comentario + miembroMesa[i].verInfo();
-            
+            if (miembroMesa[i] != null) {
+                comentario = comentario + miembroMesa[i].verInfo();
+            }else{
+                comentario += "\n  - [Puesto no asignado]";
+            }
         }
-        return "MesaElectoral{" + "ID de Mesa:" + idMesa + "Miembros de Mesa: " + comentario  + '}';
+        return "MesaElectoral{ ID de Mesa:" + idMesa + "Miembros de Mesa: " + comentario  + '}';
     }
    
     
