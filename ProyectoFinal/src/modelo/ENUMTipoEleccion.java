@@ -1,7 +1,7 @@
 
 package modelo;
 
-public enum ENUM_TipoEleccion {
+public enum ENUMTipoEleccion {
     MUNICIPAL,
     NACIONAL,
     REFERENDUM

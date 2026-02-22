@@ -49,9 +49,9 @@ public class HPersona {
     
     //OTROS METODOS
     public String verInfo(){
-        return "Nombres:"+nombres+"\n"+
-                "Apellidos:"+apellidos+"\n"+
-                "Numero de Dni:"+nrodni;
+        return "Nombres: "+ nombres+
+                "\nApellidos: "+ apellidos+
+                "\nNumero de Dni: "+ nrodni;
     }
     
 }

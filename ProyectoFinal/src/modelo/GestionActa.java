@@ -78,7 +78,7 @@ public class GestionActa {
     //El sistema debe realizar el conteo automático de votos, incluyendo los votos 
     //preferenciales, y generar resultados instantáneos con desgloses por candidato.
 
-        public void totalVotosCandidatos(HCandidato[] listaCandidatos){
+    public void totalVotosCandidatos(HCandidato[] listaCandidatos){
         int suma = 0;
         for (int i = 0; i < contador; i++) {
             DetalleVoto[] resultados = listaActas[i].getResultadosCandidatos();
@@ -86,7 +86,7 @@ public class GestionActa {
                 suma += resultados[j].getCantidadCandidato();
             }
         }
-        return suma;
+        
     }
     
     

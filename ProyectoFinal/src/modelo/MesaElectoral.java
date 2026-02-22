@@ -1,30 +1,47 @@
 package modelo;
-import java.util.Scanner;
 
 public class MesaElectoral {
     //ATRIBUTOS de clase
     private int idMesa;
     private HMiembroDeMesa[] miembroMesa; //sale de la clase de Miembro de mesa
-    private int nroTotalVotantesRegistrados;
-    private int cantMDM;
-    private static int MAX = 3; //son solo 3 miembros
-    //resultados por candidato
-   
-    //votos en blancoy nulos
 
-    public MesaElectoral() {
-        idMesa = 0;
-        miembroMesa = new HMiembroDeMesa[MAX];
-        nroTotalVotantesRegistrados = 0;
-        cantMDM = 0;
+    private static int MAX = 3; //son solo 3 miembros
+
+    //METODO
+    //CONSTRUCTOR
+    public MesaElectoral(int idMesa, HMiembroDeMesa[] miembroMesa) {
+        this.idMesa = idMesa;
+        this.miembroMesa = new HMiembroDeMesa[MAX];
+    }
+
+    //GETTER AND SETTER
+    public int getIdMesa() {
+        return idMesa;
+    }
+
+    public void setIdMesa(int idMesa) {
+        this.idMesa = idMesa;
+    }
+
+    public HMiembroDeMesa[] getMiembroMesa() {
+        return miembroMesa;
+    }
+
+    public void setMiembroMesa(HMiembroDeMesa[] miembroMesa) {
+        this.miembroMesa = miembroMesa;
+    }
+
+    //verInfo
+    public String verInfo() {
+        String comentario = "";
+        for (int i = 0; i < miembroMesa.length; i++) {
+            comentario = comentario + miembroMesa[i].verInfo();
+            
+        }
+        return "MesaElectoral{" + "ID de Mesa:" + idMesa + "Miembros de Mesa: " + comentario  + '}';
     }
    
-    public MesaElectoral(int idMesa,int nroTotalVotantesRegistrados) {
-        this.idMesa = idMesa;
-        miembroMesa = new HMiembroDeMesa[MAX];
-        this.nroTotalVotantesRegistrados = nroTotalVotantesRegistrados;
-        cantMDM = 0;
-    }
+    
    
     public void modificarMesaElectoral(){
         Scanner sc = new Scanner(System.in);
@@ -35,7 +52,9 @@ public class MesaElectoral {
         nroTotalVotantesRegistrados = sc.nextInt();
     }
    
+   //resultados por candidato
    
+    //votos en blancoy nulos
     public void agregarMiembrosMesa(HMiembroDeMesa miembroDeMesa){
         if (cantMDM < MAX){
             miembroMesa[cantMDM] = miembroDeMesa;
@@ -57,8 +76,10 @@ public class MesaElectoral {
         }
     }
    
-    public void verInfo() {
-        System.out.println("Informacion de la mesa: \n");
+    public String verInfo() {
+        return "Informacion de la mesa: \n" +
+               "\nID de la mesa: " + idMesa + 
+                "\nMiembro de mesa: " + 
         System.out.println("Id de la mesa: "+idMesa+"\n"+
                 "Numero de votantes registrados: "+nroTotalVotantesRegistrados+"\n"+
                 "cantidad de miembros de mesa: "+cantMDM+"\n");

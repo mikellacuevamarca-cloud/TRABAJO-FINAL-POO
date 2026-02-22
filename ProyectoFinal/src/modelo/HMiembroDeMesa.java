@@ -2,38 +2,37 @@ package modelo;
 
 public class HMiembroDeMesa extends HPersona{
     //ATRIBUTOS
-    public String tipoDeMiembro;
+    public ENUMTipoEleccion tipoDeMiembro;
     
     //METODOS
-    //CONSTRUCTOR sin p
-    public HMiembroDeMesa() {
-        super();
-        tipoDeMiembro = "";
-    }
-    
     //Constructor con p
-    public HMiembroDeMesa(String nombres, String apellidos, int nrodni, String tipoDeMiembro){
+    public HMiembroDeMesa(String nombres, String apellidos, int nrodni, 
+            ENUMTipoEleccion tipoDeMiembro){
         super(nombres, apellidos, nrodni);
         this.tipoDeMiembro = tipoDeMiembro;
     }
     
-    //get and set
-
-    public String getTipoDeMiembro() {
+    //getter and setter
+    public ENUMTipoEleccion getTipoDeMiembro() {
         return tipoDeMiembro;
     }
 
-    public void setTipoDeMiembro(String tipoDeMiembro) {
+    public void setTipoDeMiembro(ENUMTipoEleccion tipoDeMiembro) {
         this.tipoDeMiembro = tipoDeMiembro;
     }
     
     //redefinir verInfo()
     @Override
-    public void verInfo(){
-        System.out.println("Información del miembro de mesa: ");
-        super.verInfo();
-        System.out.println("Tipo de miembro(presidente, secretarion o vocal): " + tipoDeMiembro);
+    public String verInfo(){
+        return "MiembroDeMesa {" + super.verInfo() + "Tipo De Miembro: " +
+                tipoDeMiembro + '}';
     }
-    
-    
+
 }
+//METODOS
+    /*CONSTRUCTOR sin p
+    public HMiembroDeMesa() {
+        super();
+        tipoDeMiembro = "";
+    }*/
+    
