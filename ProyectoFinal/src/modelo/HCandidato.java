@@ -30,7 +30,7 @@ public class HCandidato extends HPersona {
     
     @Override
     public String toString(){
-        return "Candidato:"+nombres +"\n"+"Partido Politico:" + partidoPolitico;
+        return nombres;
     }
     public void registroCandidato(){
         Scanner sc = new Scanner(System.in);

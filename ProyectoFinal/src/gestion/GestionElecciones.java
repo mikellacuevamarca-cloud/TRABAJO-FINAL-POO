@@ -1,6 +1,6 @@
 package gestion;
 import modelo.*;
-import subClasesEleccion.*;
+import SubClasesEleccion.*;
 public class GestionElecciones {
     private Eleccion[] elecciones;
     private int nroElecciones;
