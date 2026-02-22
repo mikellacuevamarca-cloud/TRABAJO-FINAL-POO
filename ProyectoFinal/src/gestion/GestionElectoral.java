@@ -1,5 +1,5 @@
 package gestion;
-import modelo.Candidato;
+import modelo.HCandidato;
 import modelo.Eleccion;
 public class GestionElectoral {
     

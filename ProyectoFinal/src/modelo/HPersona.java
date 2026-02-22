@@ -1,7 +1,7 @@
 
 package modelo;
 
-public class Persona {
+public class HPersona {
     //ATRIBUTOS
     protected String nombres;
     protected String apellidos;
@@ -9,14 +9,14 @@ public class Persona {
     
     //metodo
     //CONSTRUCTOR sin p
-    public Persona() {
+    public HPersona() {
         nombres = "";
         apellidos = "";
         nrodni = 0;
     }
 
     //constructor con p
-    public Persona(String nombres, String apellidos, int nrodni) {
+    public HPersona(String nombres, String apellidos, int nrodni) {
         this.nombres = nombres;
         this.apellidos = apellidos;
         this.nrodni = nrodni;

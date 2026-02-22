@@ -1,17 +1,17 @@
 package modelo;
 import java.util.Scanner;
-public class Candidato extends Persona {
+public class HCandidato extends HPersona {
     //ATRIBUTOS
     private PartidoPolitico partidoPolitico;
     
     //METODOS
     //CONSTRUCTOR sin p
-    public Candidato() {
+    public HCandidato() {
         super();
     }
 
     //constructor con p
-    public Candidato(String nombres, String apellidos, int nrodni, PartidoPolitico partidoPolitico){
+    public HCandidato(String nombres, String apellidos, int nrodni, PartidoPolitico partidoPolitico){
         super(nombres, apellidos, nrodni);
         this.partidoPolitico = partidoPolitico;
     }

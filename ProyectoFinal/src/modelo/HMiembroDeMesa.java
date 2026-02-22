@@ -1,18 +1,18 @@
 package modelo;
 
-public class MiembroDeMesa extends Persona{
+public class HMiembroDeMesa extends HPersona{
     //ATRIBUTOS
     public String tipoDeMiembro;
     
     //METODOS
     //CONSTRUCTOR sin p
-    public MiembroDeMesa() {
+    public HMiembroDeMesa() {
         super();
         tipoDeMiembro = "";
     }
     
     //Constructor con p
-    public MiembroDeMesa(String nombres, String apellidos, int nrodni, String tipoDeMiembro){
+    public HMiembroDeMesa(String nombres, String apellidos, int nrodni, String tipoDeMiembro){
         super(nombres, apellidos, nrodni);
         this.tipoDeMiembro = tipoDeMiembro;
     }

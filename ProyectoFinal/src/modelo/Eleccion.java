@@ -3,20 +3,23 @@ package modelo;
 public abstract class Eleccion {
     //atributos de intancia
     private Fecha fecha;
-    private Candidato candidatoAsociado;
+    private HCandidato candidatoAsociado;
+    
+    //CONSTRUCTORES
     public Eleccion(){
         fecha = new Fecha();
     }
-    public Eleccion(Fecha fecha, Candidato candidatoAsociado){
+    public Eleccion(Fecha fecha, HCandidato candidatoAsociado){
         this.fecha=fecha;
         this.candidatoAsociado=candidatoAsociado;
     }
-
+    
+    //get and set
     public Fecha getFecha() {
         return fecha;
     }
 
-    public Candidato getCandidatoAsociado() {
+    public HCandidato getCandidatoAsociado() {
         return candidatoAsociado;
     }
 
@@ -24,9 +27,10 @@ public abstract class Eleccion {
         this.fecha = fecha;
     }
 
-    public void setCandidatoAsociado(Candidato candidatoAsociado) {
+    public void setCandidatoAsociado(HCandidato candidatoAsociado) {
         this.candidatoAsociado = candidatoAsociado;
     }
+    
     public String verInfo(){
         return "Fecha:"+fecha+"\n"+candidatoAsociado;
     }

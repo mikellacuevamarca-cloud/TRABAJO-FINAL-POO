@@ -4,24 +4,24 @@ import java.util.Scanner;
 public class MesaElectoral {
     //ATRIBUTOS de clase
     private int idMesa;
-    private MiembroDeMesa[] miembroMesa;
+    private HMiembroDeMesa[] miembroMesa; //sale de la clase de Miembro de mesa
     private int nroTotalVotantesRegistrados;
     private int cantMDM;
-    private static int MAX = 10;
+    private static int MAX = 3; //son solo 3 miembros
     //resultados por candidato
    
     //votos en blancoy nulos
 
     public MesaElectoral() {
         idMesa = 0;
-        miembroMesa = new MiembroDeMesa[MAX];
+        miembroMesa = new HMiembroDeMesa[MAX];
         nroTotalVotantesRegistrados = 0;
         cantMDM = 0;
     }
    
     public MesaElectoral(int idMesa,int nroTotalVotantesRegistrados) {
         this.idMesa = idMesa;
-        miembroMesa = new MiembroDeMesa[MAX];
+        miembroMesa = new HMiembroDeMesa[MAX];
         this.nroTotalVotantesRegistrados = nroTotalVotantesRegistrados;
         cantMDM = 0;
     }
@@ -36,7 +36,7 @@ public class MesaElectoral {
     }
    
    
-    public void agregarMiembrosMesa(MiembroDeMesa miembroDeMesa){
+    public void agregarMiembrosMesa(HMiembroDeMesa miembroDeMesa){
         if (cantMDM < MAX){
             miembroMesa[cantMDM] = miembroDeMesa;
             cantMDM++;
