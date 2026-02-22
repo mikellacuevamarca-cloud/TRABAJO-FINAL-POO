@@ -40,6 +40,14 @@ public abstract class Eleccion {
                 "Candidatos:"+mensajecan;
     }
     public abstract String verInfo();
-    
+    public void agregarCandidato(HCandidato candidato){
+        if(nroCandidatos<MAX){
+            candidatos[nroCandidatos]=candidato;
+            nroCandidatos++;
+        }
+        else{
+            System.out.println("Espacio lleno.");
+        }
+    }
     
 }
