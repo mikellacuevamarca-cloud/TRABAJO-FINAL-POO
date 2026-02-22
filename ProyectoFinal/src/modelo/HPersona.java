@@ -48,10 +48,10 @@ public class HPersona {
     }
     
     //OTROS METODOS
-    public void verInfo(){
-        System.out.println("Nombres: " + nombres);
-        System.out.println("Apellidos: " + apellidos);
-        System.out.println("DNI: " + nrodni);
+    public String verInfo(){
+        return "Nombres:"+nombres+"\n"+
+                "Apellidos:"+apellidos+"\n"+
+                "Numero de Dni:"+nrodni;
     }
     
 }

@@ -2,16 +2,23 @@ package modelo;
 
 public abstract class Eleccion {
     //atributos de intancia
-    private Fecha fecha;
-    private HCandidato candidatoAsociado;
+    protected Fecha fecha;
+    protected HCandidato[] candidatos;
+    protected int nroCandidatos;
+    protected String titulo;
+    private static final int MAX=100;
     
     //CONSTRUCTORES
     public Eleccion(){
         fecha = new Fecha();
+        nroCandidatos=0;
+        titulo="";
+        candidatos=new HCandidato[MAX];
     }
-    public Eleccion(Fecha fecha, HCandidato candidatoAsociado){
+    public Eleccion(Fecha fecha, HCandidato[] candidatos, String titulo){
         this.fecha=fecha;
-        this.candidatoAsociado=candidatoAsociado;
+        this.candidatos=candidatos;
+        this.titulo=titulo;
     }
     
     //get and set
@@ -19,22 +26,20 @@ public abstract class Eleccion {
         return fecha;
     }
 
-    public HCandidato getCandidatoAsociado() {
-        return candidatoAsociado;
-    }
-
     public void setFecha(Fecha fecha) {
         this.fecha = fecha;
     }
-
-    public void setCandidatoAsociado(HCandidato candidatoAsociado) {
-        this.candidatoAsociado = candidatoAsociado;
+    @Override
+    public String toString() {
+        String mensajecan="";
+        for(int i = 0; i<nroCandidatos;i++){
+            mensajecan=mensajecan+candidatos[nroCandidatos].toString()+"\n";
+        }
+        return "========"+titulo+"========"+"\n"+
+                "Fecha:"+fecha+"\n"+
+                "Candidatos:"+mensajecan;
     }
-    
-    public String verInfo(){
-        return "Fecha:"+fecha+"\n"+candidatoAsociado;
-    }
-    public abstract void registrarEleccion();
+    public abstract String verInfo();
     
     
 }

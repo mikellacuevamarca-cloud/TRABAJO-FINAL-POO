@@ -55,10 +55,12 @@ public class HCandidato extends HPersona {
         opcion = sc.next().charAt(0);
     }
     @Override
-    public void verInfo() {
-        System.out.println("Información del candidato: ");
-        super.verInfo();
-        System.out.println(partidoPolitico);
+    public String verInfo() {
+        return "====== INFORMACION CANDIDATO ======"+"\n"+
+                super.verInfo()+"\n"+
+                "Partido Politico:"+"\n"+
+                "==== INFORMACION DE PARTIDO POLITICO ===="+"\n"+
+                partidoPolitico.verInfo();
     }
 
 }
