@@ -56,16 +56,22 @@ public class GestionMiembros {
         HMiembroDeMesa encontrada = buscarMiembroPorDni(dni);
         for (int i = 0; i < num; i++) {
             if(encontrada != null){
-                for (int j = 0; j < num; j++) {
+                for (int j = i; j < num-1; j++) {
                     miembros [j]= miembros[j+1];
                     
                 }
-                miembros[num-1] = null;
-                num--;
+            num--;
             }
                
         }
         return null;
     }
-    
+    public String mostrarMiembros(){
+        String mensaje = "";
+        for(int i = 0; i < num; i++){
+            mensaje = mensaje + miembros[i].verInfo() + "\n";
+        }
+        return mensaje;
+    }
+   
 }
