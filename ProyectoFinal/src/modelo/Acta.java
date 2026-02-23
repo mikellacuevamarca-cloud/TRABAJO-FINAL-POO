@@ -1,6 +1,5 @@
-
 package modelo;
-
+import modelo.*;
 public class Acta {
     //ATRIBUTOS
     private String titulodoc;
@@ -176,11 +175,61 @@ public class Acta {
         this.resultadosCandidatos = resultadosCandidatos;
     }
     
-    //ver info
 
-    
-    public String verInfo() {
-        return "Acta{" + "titulodoc=" + titulodoc + ", fecha=" + fecha + ", hora=" + hora + ", lugar=" + lugar + ", idmesa=" + idmesa + ", miembroMesa=" + miembroMesa + ", observaciones=" + observaciones + ", firma=" + firma + ", sello=" + sello + ", nroacta=" + nroacta + ", numtotalVotantesRegistrados=" + numtotalVotantesRegistrados + ", numTotalVotantesEfectivos=" + numTotalVotantesEfectivos + ", numTotalVotosNulos=" + numTotalVotosNulos + ", numTotalVotosBlanco=" + numTotalVotosBlanco + ", cantCandidatos=" + cantCandidatos + ", resultadosCandidatos=" + resultadosCandidatos + '}';
+    // metodo eliminar agregar y modificar
+    public void agregarMiembroMesa(HMiembroDeMesa m, int pos) {
+        if (pos >= 0 && pos < miembroMesa.length) {
+            miembroMesa[pos] = m;
+        }
     }
-    
+
+    public void eliminarMiembroMesa(int pos) {
+        if (pos >= 0 && pos < miembroMesa.length) {
+            miembroMesa[pos] = null;
+        }
+    }
+
+    public void modificarMiembroMesa(int pos, HMiembroDeMesa nuevo) {
+        if (pos >= 0 && pos < miembroMesa.length) {
+            miembroMesa[pos] = nuevo;
+        }
+    }
+
+    //candidatos
+    public void agregarResultado(int pos, DetalleVoto detalle) {
+        if (pos >= 0 && pos < resultadosCandidatos.length) {
+            resultadosCandidatos[pos] = detalle;
+        }
+    }
+
+    public void eliminarResultado(int pos) {
+        if (pos >= 0 && pos < resultadosCandidatos.length) {
+            resultadosCandidatos[pos] = null;
+        }
+    }
+
+    public void modificarResultado(int pos, DetalleVoto nuevoDetalle) {
+        if (pos >= 0 && pos < resultadosCandidatos.length) {
+            resultadosCandidatos[pos] = nuevoDetalle;
+        }
+    }
+
+    public String verInfo() {
+        return  "====== ACTA ELECTORAL ======\n" +
+            "Titulo: " + titulodoc + "\n" +
+            "Fecha: " + fecha + "\n" +
+            "Hora: " + hora + "\n" +
+            "Lugar: " + lugar + "\n" +
+            "Mesa: " + idmesa + "\n" +
+            "Observaciones: " + observaciones + "\n" +
+            "Firma: " + firma + "\n" +
+            "Sello: " + sello + "\n" +
+            "Numero de Acta: " + nroacta + "\n" +
+            "Votantes Registrados: " + numtotalVotantesRegistrados + "\n" +
+            "Votantes Efectivos: " + numTotalVotantesEfectivos + "\n" +
+            "Votos Nulos: " + numTotalVotosNulos + "\n" +
+            "Votos en Blanco: " + numTotalVotosBlanco + "\n" +
+            "Cantidad de Candidatos: " + cantCandidatos;
+      
+    }
 }

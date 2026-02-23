@@ -5,6 +5,11 @@ public class HMiembroDeMesa extends HPersona{
     public ENUMTipoEleccion tipoDeMiembro;
     
     //METODOS
+    //conastructor sin p
+    public HMiembroDeMesa() {
+        super();
+        tipoDeMiembro = null;
+    }
     //Constructor con p
     public HMiembroDeMesa(String nombres, String apellidos, int nrodni, 
             ENUMTipoEleccion tipoDeMiembro){
@@ -29,10 +34,3 @@ public class HMiembroDeMesa extends HPersona{
     }
 
 }
-//METODOS
-    /*CONSTRUCTOR sin p
-    public HMiembroDeMesa() {
-        super();
-        tipoDeMiembro = "";
-    }*/
-    
