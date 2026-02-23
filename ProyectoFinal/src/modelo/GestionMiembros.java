@@ -14,7 +14,7 @@ public class GestionMiembros {
         this.num = 0;
     }
     
-    //OTROS METODOS
+    //OTROS METODOSs
     //agregar
     public void ingresarUnMiembro(HMiembroDeMesa m){
         //validar q haya espacio en el arreglo 
