@@ -1,4 +1,7 @@
-package modelo;
+package gestion;
+
+import modelo.Acta;
+import modelo.DetalleVoto;
 
 public class GestionActa {
     //ATRIBUTOS

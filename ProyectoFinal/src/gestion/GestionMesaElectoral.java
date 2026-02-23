@@ -1,5 +1,5 @@
 
-package modelo;
+package gestion;
 
 public class GestionMesaElectoral {
     
