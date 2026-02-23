@@ -53,19 +53,23 @@ public class GestionMiembros {
     
     //corregir
     public HMiembroDeMesa eliminar(int dni){
-        HMiembroDeMesa encontrada = buscarMiembroPorDni(dni);
         for (int i = 0; i < num; i++) {
-            if(encontrada != null){
-                for (int j = i; j < num-1; j++) {
-                    miembros [j]= miembros[j+1];
-                    
+            if (miembros[i].getNrodni() == dni) {
+                HMiembroDeMesa eliminado = miembros[i]; // Guardamos el que vamos a borrar
+
+                // Desplazamiento hacia la izquierda
+                for (int j = i; j < num - 1; j++) {
+                    miembros[j] = miembros[j + 1];
                 }
-            num--;
+
+                miembros[num - 1] = null; // Limpieza de la última posición
+                num--; // Reducimos el contador
+                return eliminado; // Éxito: salimos del método
             }
-               
         }
-        return null;
+        return null; // No se encontró el DNI
     }
+    
     public String mostrarMiembros(){
         String mensaje = "";
         for(int i = 0; i < num; i++){
