@@ -11,9 +11,9 @@ public class HMiembroDeMesa extends HPersona{
         tipoDeMiembro = null;
     }
     //Constructor con p
-    public HMiembroDeMesa(String nombres, String apellidos, int nrodni, 
+    public HMiembroDeMesa(int nrodni, String nombres, String apellidos,
             ENUMTipoMiembro tipoDeMiembro){
-        super(nombres, apellidos, nrodni);
+        super(nrodni, nombres, apellidos);
         this.tipoDeMiembro = tipoDeMiembro;
     }
     

@@ -1,5 +1,8 @@
 
-package modelo;
+package gestion;
+
+import modelo.ENUMTipoMiembro;
+import modelo.HMiembroDeMesa;
 
 public class GestionMiembros {
     //atributos
@@ -48,6 +51,7 @@ public class GestionMiembros {
         
     }
     
+    //corregir
     public HMiembroDeMesa eliminar(int dni){
         HMiembroDeMesa encontrada = buscarMiembroPorDni(dni);
         for (int i = 0; i < num; i++) {
