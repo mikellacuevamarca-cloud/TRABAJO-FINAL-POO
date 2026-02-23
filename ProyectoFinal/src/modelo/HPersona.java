@@ -3,26 +3,36 @@ package modelo;
 
 public class HPersona {
     //ATRIBUTOS
+    protected int nrodni;
     protected String nombres;
     protected String apellidos;
-    protected int nrodni; 
+     
     
     //metodo
     //CONSTRUCTOR sin p
     public HPersona() {
+        nrodni = 0;
         nombres = "";
         apellidos = "";
-        nrodni = 0;
+        
     }
 
     //constructor con p
-    public HPersona(String nombres, String apellidos, int nrodni) {
-        this.nombres = nombres;
-        this.apellidos = apellidos;
+    public HPersona(int nrodni, String nombres, String apellidos) {
         this.nrodni = nrodni;
+        this.nombres = nombres;
+        this.apellidos = apellidos;    
     }
 
     //get and set
+    public int getNrodni() {
+        return nrodni;
+    }
+
+    public void setNrodni(int nrodni) {
+        this.nrodni = nrodni;
+    }
+    
     public String getNombres() {
         return nombres;
     }
@@ -39,19 +49,13 @@ public class HPersona {
         this.apellidos = apellidos;
     }
 
-    public int getNrodni() {
-        return nrodni;
-    }
-
-    public void setNrodni(int nrodni) {
-        this.nrodni = nrodni;
-    }
+    
     
     //OTROS METODOS veriinfo
     public String verInfo(){
-        return "Nombres: "+ nombres+
-                "\nApellidos: "+ apellidos+
-                "\nNumero de Dni: "+ nrodni;
+        return "nNumero de Dni: "+ nrodni+
+                "\nNombres: "+ nombres+
+                "\nApellidosi: "+ apellidos;
     }
     
 }
