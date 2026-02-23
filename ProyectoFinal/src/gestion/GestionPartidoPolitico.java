@@ -13,6 +13,7 @@ public class GestionPartidoPolitico {
     public void agregarPartido(PartidoPolitico partido){
         if(nroPartidos<MAX){
             partidos[nroPartidos]=partido;
+            nroPartidos++;
         }
         else{
             System.out.println("Error, espacio lleno.");
@@ -31,10 +32,18 @@ public class GestionPartidoPolitico {
         if(pos>=0&&pos<nroPartidos){
             for(int i=pos;i<nroPartidos-1;i++){
                 partidos[i]=partidos[i+1];
+                nroPartidos--;
             }
         }
         else{
             System.out.println("Posicion no valida.");
         }
+    }
+    public String mostrarPartidos(){
+        String mensaje="";
+        for(int i=0;i<nroPartidos;i++){
+            mensaje=mensaje+partidos[i].verInfo()+"\n";
+        }
+        return mensaje;
     }
 }

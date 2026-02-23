@@ -50,7 +50,8 @@ public class PartidoPolitico {
         this.representante = representante;
     }
     public String verInfo(){
-        return "Nombre Partido:"+nombrePartido+"n"+
+        return "==== INFORMACION PARTIDO POLITICO ==="+"\n"+
+                "Nombre Partido:"+nombrePartido+"n"+
                 "Sigla Partido:"+sigla+"\n"+
                 "Simbolo partido:"+simbolo+"\n"+
                 "Representante partido:"+representante;

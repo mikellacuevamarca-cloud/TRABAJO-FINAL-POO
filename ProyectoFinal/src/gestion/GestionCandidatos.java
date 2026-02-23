@@ -11,6 +11,7 @@ public class GestionCandidatos {
     public void agregarCandidato(HCandidato candidato){
         if(nroCandidatos<MAX){
             candidatos[nroCandidatos]= candidato;
+            nroCandidatos++;
         }
         else{
             System.out.println("Error, espacio lleno");
@@ -20,6 +21,7 @@ public class GestionCandidatos {
         if(pos>=0&&pos<nroCandidatos){
             for(int i=pos;i<nroCandidatos-1;i++){
                 candidatos[i]=candidatos[i+1];
+                nroCandidatos--;
             }
         }
         else{

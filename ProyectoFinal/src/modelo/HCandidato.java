@@ -32,28 +32,6 @@ public class HCandidato extends HPersona {
     public String toString(){
         return nombres;
     }
-    public void registroCandidato(){
-        Scanner sc = new Scanner(System.in);
-        System.out.print("Ingrese el nombre del candidato:");
-        nombres=sc.nextLine();
-        System.out.print("Ingrese el apellido del candidato:");
-        apellidos=sc.nextLine();
-        System.out.print("Ingrese el numero de dni del candidato");
-        nrodni=sc.nextInt();
-        sc.nextLine();
-    }
-    public void modificarCandidato(){
-        char opcion;
-        Scanner sc = new Scanner(System.in);
-        System.out.print("Modifique el nombre del candidato:");
-        nombres=sc.nextLine();
-        System.out.print("Modifique el apellido del candidato:");
-        apellidos=sc.nextLine();
-        System.out.println("Modifique el dni del candidato:");
-        nrodni=sc.nextInt();
-        System.out.print("Desea modificar los datos del partido actual:");
-        opcion = sc.next().charAt(0);
-    }
     @Override
     public String verInfo() {
         return "====== INFORMACION CANDIDATO ======"+"\n"+
