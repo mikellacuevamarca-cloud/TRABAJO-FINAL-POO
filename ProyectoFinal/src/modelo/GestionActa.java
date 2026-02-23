@@ -78,7 +78,7 @@ public class GestionActa {
     //El sistema debe realizar el conteo automático de votos, incluyendo los votos 
     //preferenciales, y generar resultados instantáneos con desgloses por candidato.
 
-    public void totalVotosCandidatos(HCandidato[] listaCandidatos){
+    /*public void totalVotosCandidatos(HCandidato[] listaCandidatos){
         int suma = 0;
         for (int i = 0; i < contador; i++) {
             DetalleVoto[] resultados = listaActas[i].getResultadosCandidatos();
@@ -87,7 +87,60 @@ public class GestionActa {
             }
         }
         
+    }*/
+    
+     // Conteo automático de votos por candidato
+    public String contarVotosPorCandidato() {
+        String resultado = "=== RESULTADOS POR CANDIDATO ===\n";
+        for (int i = 0; i < contador; i++) {
+            Acta a = listaActas[i];
+            DetalleVoto[] resultados = a.getResultadosCandidatos();
+            if(resultados != null){
+                for (int j = 0; j < resultados.length; j++) {
+                    if(resultados[j] != null){
+                        resultado = resultado + "Candidato: " + resultados[j].getCandidato().getNombres() + " "
+                                + resultados[j].getCandidato().getApellidos() + "\n";
+                        resultado = resultado + "  Votos Totales: " + resultados[j].getCantidadCandidato() + "\n";
+                        resultado = resultado + "  Votos Preferenciales: " + resultados[j].getVotosPreferenciales() + "\n";
+                    }
+                }
+            }
+        }
+        return resultado;
     }
+    
+    // Generar informe detallado por elección y mesa electoral
+    public String generarInformeDetallado() {
+        String informe = "=== INFORME DETALLADO DE ACTAS ===\n";
+        for (int i = 0; i < contador; i++) {
+            Acta a = listaActas[i];
+            informe = informe + "Acta Nro: " + a.getNroacta() + "\n";
+            informe = informe + "Mesa ID: " + a.getIdmesa().getIdMesa() + "\n";
+            informe = informe + "Votantes Registrados: " + a.getNumtotalVotantesRegistrados() + "\n";
+            informe = informe + "Votantes Efectivos: " + a.getNumTotalVotantesEfectivos() + "\n";
+            informe = informe + "Votos Nulos: " + a.getNumTotalVotosNulos() + "\n";
+            informe = informe + "Votos en Blanco: " + a.getNumTotalVotosBlanco() + "\n";
+            
+            DetalleVoto[] resultados = a.getResultadosCandidatos();
+            if(resultados != null){
+                informe = informe + "Resultados por candidato:\n";
+                for (int j = 0; j < resultados.length; j++) {
+                    if(resultados[j] != null){
+                        informe = informe + "  Candidato: " + resultados[j].getCandidato().getNombres() + " "
+                                + resultados[j].getCandidato().getApellidos() + "\n";
+                        informe = informe + "    Votos Totales: " + resultados[j].getCantidadCandidato() + "\n";
+                        informe = informe + "    Votos Preferenciales: " + resultados[j].getVotosPreferenciales() + "\n";
+                    }   //sumar totales + preferenciales
+                }
+            }
+            informe = informe + "\n";
+        }
+        return informe;
+    }
+}
+
+
+
     
     
 }

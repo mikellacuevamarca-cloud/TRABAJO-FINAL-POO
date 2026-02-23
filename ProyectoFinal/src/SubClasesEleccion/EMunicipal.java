@@ -23,3 +23,4 @@ public class EMunicipal extends Eleccion{
                 "Zona de Eleccion:"+lugar;
     }
 }
+//eleccion, mesas - miembros, actas 

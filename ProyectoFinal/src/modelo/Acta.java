@@ -2,7 +2,7 @@
 package modelo;
 
 public class Acta {
-    //ATRIBUTOS
+    //ATRIBUTOS de clase
     private String titulodoc;
     private Fecha fecha;
     private Hora hora;
