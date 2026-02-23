@@ -1,4 +1,3 @@
-
 package modelo;
 
 public class Acta {
@@ -178,9 +177,39 @@ public class Acta {
     
     //ver info
 
-    
-    public String verInfo() {
-        return "Acta{" + "titulodoc=" + titulodoc + ", fecha=" + fecha + ", hora=" + hora + ", lugar=" + lugar + ", idmesa=" + idmesa + ", miembroMesa=" + miembroMesa + ", observaciones=" + observaciones + ", firma=" + firma + ", sello=" + sello + ", nroacta=" + nroacta + ", numtotalVotantesRegistrados=" + numtotalVotantesRegistrados + ", numTotalVotantesEfectivos=" + numTotalVotantesEfectivos + ", numTotalVotosNulos=" + numTotalVotosNulos + ", numTotalVotosBlanco=" + numTotalVotosBlanco + ", cantCandidatos=" + cantCandidatos + ", resultadosCandidatos=" + resultadosCandidatos + '}';
+    @Override
+    public String toString() {
+        return "Acta{" + "titulodoc=" + titulodoc + ", fecha=" + fecha + ", "
+                + "hora=" + hora + ", lugar=" + lugar + ", idmesa=" + idmesa + ", "
+                + "miembroMesa=" + miembroMesa + ", observaciones=" + observaciones + 
+                ", firma=" + firma + ", sello=" + sello + ", nroacta=" + nroacta + 
+                ", numtotalVotantesRegistrados=" + numtotalVotantesRegistrados + 
+                ", numTotalVotantesEfectivos=" + numTotalVotantesEfectivos + 
+                ", numTotalVotosNulos=" + numTotalVotosNulos + 
+                ", numTotalVotosBlanco=" + numTotalVotosBlanco + 
+                ", cantCandidatos=" + cantCandidatos + 
+                ", resultadosCandidatos=" + resultadosCandidatos + '}';
     }
-    
+
+
+    public String verInfo() {
+        return  "====== ACTA ELECTORAL ======" +
+            "\nTitulo: " + titulodoc +
+            "\nFecha: " + fecha +
+            "\nHora: " + hora +
+            "\nLugar: " + lugar +
+            "\nMesa: " + idmesa +
+            "\nMiembro de mesa: " + miembroMesa + //arreglo
+            "\nObservaciones: " + observaciones +
+            "\nFirma: " + firma +
+            "\nSello: " + sello  +
+            "\nNumero de Acta: " + nroacta  +
+            "\nVotantes Registrados: " + numtotalVotantesRegistrados  +
+            "\nVotantes Efectivos: " + numTotalVotantesEfectivos  +
+            "\nVotos Nulos: " + numTotalVotosNulos  +
+            "\nVotos en Blanco: " + numTotalVotosBlanco +
+            "\nCantidad de Candidatos: " + cantCandidatos +
+            "\nResultados de Candidatos: " + cantCandidatos;//arreglo
+      
+    }
 }

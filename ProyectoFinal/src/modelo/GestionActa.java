@@ -1,4 +1,3 @@
-
 package modelo;
 
 public class GestionActa {
@@ -6,8 +5,10 @@ public class GestionActa {
     private Acta[] listaActas;
     private int contador;
 
+    private static final int MAX = 5;
+            
     public GestionActa(int cant) {
-        listaActas = new Acta[cant];
+        listaActas = new Acta[5];
         contador = 0;
     }
     
@@ -108,7 +109,7 @@ public class GestionActa {
         }
         return resultado;
     }
-    
+
     // Generar informe detallado por elección y mesa electoral
     public String generarInformeDetallado() {
         String informe = "=== INFORME DETALLADO DE ACTAS ===\n";
@@ -143,4 +144,4 @@ public class GestionActa {
 
     
     
-}
+

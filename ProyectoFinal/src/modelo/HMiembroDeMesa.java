@@ -2,22 +2,27 @@ package modelo;
 
 public class HMiembroDeMesa extends HPersona{
     //ATRIBUTOS
-    public ENUMTipoEleccion tipoDeMiembro;
+    public ENUMTipoMiembro tipoDeMiembro;
     
     //METODOS
+    //conastructor sin p
+    public HMiembroDeMesa() {
+        super();
+        tipoDeMiembro = null;
+    }
     //Constructor con p
     public HMiembroDeMesa(String nombres, String apellidos, int nrodni, 
-            ENUMTipoEleccion tipoDeMiembro){
+            ENUMTipoMiembro tipoDeMiembro){
         super(nombres, apellidos, nrodni);
         this.tipoDeMiembro = tipoDeMiembro;
     }
     
     //getter and setter
-    public ENUMTipoEleccion getTipoDeMiembro() {
+    public ENUMTipoMiembro getTipoDeMiembro() {
         return tipoDeMiembro;
     }
 
-    public void setTipoDeMiembro(ENUMTipoEleccion tipoDeMiembro) {
+    public void setTipoDeMiembro(ENUMTipoMiembro tipoDeMiembro) {
         this.tipoDeMiembro = tipoDeMiembro;
     }
     
@@ -29,10 +34,3 @@ public class HMiembroDeMesa extends HPersona{
     }
 
 }
-//METODOS
-    /*CONSTRUCTOR sin p
-    public HMiembroDeMesa() {
-        super();
-        tipoDeMiembro = "";
-    }*/
-    
